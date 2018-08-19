@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+var mongoose = require('mongoose');
+var http = require('http');
+
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = 8888;
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+console.log('server has started succeed!');
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+mongoose.connect('mongodb://localhost:27017/Connection',{useNewUrlParser: true},function(err)
+{
+    if(err)console.log('数据库连接失败');
+    else {
+        console.log('database has been connectted succeed!');
+        server.listen(port);}
+});
+
+
+
