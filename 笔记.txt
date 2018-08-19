@@ -1,0 +1,7 @@
+cookie:
+浏览器保存cookie:res.secret=str;res.cookis('name','value',{signed:true});
+服务器读取cookies:引入cookie-parser,use(cookieparser());req.cookies/req.signedcookies;
+最大4k,不安全（签名）；
+保存在浏览器的数据
+session:
+保存在服务器的数据，依靠cookie存在
