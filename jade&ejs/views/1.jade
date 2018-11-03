@@ -1,0 +1,29 @@
+html
+   head
+     meta(charset='utf-8')
+     title hello
+     script(src='app.js')
+     script alert('abc')
+     script.
+           //点表示属于script下的所有内容原样输出
+           window.onload()=function(){
+           var btn = document.getElementById('btn1');
+           btn.onclick=function(){
+             alert('hello');
+           } ;
+           };
+     script
+     link(href='a.css',ref='stylesheet')
+   body 
+     //-从外部传入参数{=data/ ＃{data}}
+     div=name
+     div #{name}
+     //-表示此为js代码
+     -var a=10;
+     -var b=5;
+     div #{a+b}
+     -for(var i=0;i<aa.length;i++)
+      div=aa[i]
+     input(type='text',id='abc',value='yes')
+     a(href='https://www.baidu.com') 百度一下
+     div(style={width:'200px',height:'200px',background:'blue'})
